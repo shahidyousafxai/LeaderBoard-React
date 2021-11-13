@@ -17,28 +17,32 @@ class Student extends React.Component {
   }
   //=========addScore Function
   addScore() {
-    this.setState(
-      {
-        score: this.state.score + 1,
-      },
-      () => {
-        if (this.state.score >= 33) {
-          this.setState({ success: true })
+    if (this.state.score < 100) {
+      this.setState(
+        {
+          score: this.state.score + 1,
+        },
+        () => {
+          if (this.state.score >= 33) {
+            this.setState({ success: true })
+          }
         }
-      }
-    )
+      )
+    }
   }
   minusScore() {
-    this.setState(
-      {
-        score: this.state.score - 1,
-      },
-      () => {
-        if (this.state.score <= 32) {
-          this.setState({ success: false })
+    if (this.state.score > 0) {
+      this.setState(
+        {
+          score: this.state.score - 1,
+        },
+        () => {
+          if (this.state.score <= 32) {
+            this.setState({ success: false })
+          }
         }
-      }
-    )
+      )
+    }
   }
 
   render() {
@@ -58,7 +62,7 @@ class Student extends React.Component {
             <button className='addScorebtn' onClick={() => this.addScore()}>
               +
             </button>
-            <button className='addScorebtn' onClick={() => this.minusScore()}>
+            <button className='minScorebtn' onClick={() => this.minusScore()}>
               -
             </button>
           </h2>

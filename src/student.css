@@ -32,6 +32,20 @@ p.uniName {
 }
 button.addScorebtn {
   border: none;
+  background: green;
+  color: white;
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  line-height: 16px;
+  text-align: center;
+  position: relative;
+  top: -3px;
+  left: 7px;
+  cursor: pointer;
+}
+button.minScorebtn {
+  border: none;
   background: red;
   color: white;
   border-radius: 100px;
@@ -44,9 +58,7 @@ button.addScorebtn {
   left: 7px;
   cursor: pointer;
 }
-button.addScorebtn:hover {
-  background: green;
-}
+
 .failure {
   background: red;
   color: white;
